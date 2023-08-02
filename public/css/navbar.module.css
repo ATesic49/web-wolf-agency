@@ -20,7 +20,7 @@
   z-index: inherit;
 }
 .navbar ul {
-  width: 75%;
+  /* width: 75%; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -32,7 +32,8 @@
 
 
 .navbar ul li {
-  margin-left: clamp(1rem, 10%, 4rem);
+  min-width:max-content;
+  margin-left: clamp(1rem, 5%, 4rem);
 }
 .navbar ul li a {
   color: white;
@@ -43,12 +44,20 @@
 }
 .navbar ul li a::after{
 position: absolute;
-top: calc(100% + 1vh);
-left: -10%;
-width: 120%;
-height: .2vh;
+top: 120%;
+left: 50%;
+transform: translateX(-50%);
+width: calc(100% + 1vw );
+width:0;
+height: .25vh;
 content: '';
 background-color: white;
+transition: .25s ease-in-out;
+transition-property: width;
+}
+.navbar ul li a:hover::after{
+width: calc(100% + 1vw );
+
 }
 .navbar .options {
   margin-right: 2vh;
@@ -73,11 +82,28 @@ background-color: white;
 
 .ulMobile li a {
   color: white;
+  position: relative;
   padding: 1vh;
   font-size: var(--font-size-mid);
   text-decoration: none;
 }
-
+.ulMobile li a::after{
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 1vw );
+  width:0;
+  height: .25vh;
+  content: '';
+  background-color: white;
+  transition: .25s ease-in-out;
+  transition-property: width;
+  }
+  .ulMobile li a:hover::after{
+  width: calc(100% + 1vw );
+  
+  }
 @keyframes options {
   0% {
     width: 0%;
