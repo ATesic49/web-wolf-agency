@@ -1,0 +1,14 @@
+:root {
+  --font-size-small: clamp(15px, 0.9vw, 30px);
+  --font-size-mid: clamp(18px, 1.35vw, 40px);
+  --font-size-large: clamp(20px, 1.75vw, 50px);
+  --font-size-Xlarge: clamp(25px, 2.25vw, 55px);
+  --primary-color: #4c408e;
+  --secondary-color: #0c1445;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
